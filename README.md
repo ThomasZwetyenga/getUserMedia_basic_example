@@ -15,6 +15,7 @@ This example only use one HTML page also containing JavaSript/JQuery.
 ## Camera / Picture dimensions
 I left default camera dimensions so it could be tested on any device.
 You may have to add width height values to video and img elements.
+
 The taken picture has the dimensions 480 * 640. You'll have to change it too.
 
 ## Some customization
