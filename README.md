@@ -1,7 +1,7 @@
 # getUserMedia_basic_example
 Take pictures from smartphone/computer web browser (Google Chrome, Firefox, Safari, etc) with getUserMedia in Full Screen.
 
-This example　only use one HTML page also containing JavaSript/JQuery.
+This example only use one HTML page also containing JavaSript/JQuery.
 
 ## HTTPS
 ⚠️ This will only work using HTTPS and after the user allowed the use of the camera.
@@ -19,7 +19,9 @@ The taken picture has the dimensions 480 * 640. You'll have to change it too.
 
 ## Some customization
 By default, the front camera is used. To use the rear camera, please uncomment the line:
+
 //video: { facingMode: { exact: "environment" } }
 
 On smartphones, you can choose the Full Screen orientation. For example, you can uncomment:
+
 //screen.orientation.lock("landscape");
