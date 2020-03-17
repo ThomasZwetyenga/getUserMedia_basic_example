@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      
+      $(function() {
+        $("#btn_launch_cam").click(
+          function(event){
+
+            event.preventDefault();
+
+            document.querySelector("#div_video").requestFullscreen();
+            //screen.orientation.lock("landscape"); //orientation for smartphone
+            
+            const video = document.getElementById('video');
+            const btn_screenshot = document.getElementById('btn_screenshot');
+
+            const constraints = {
+              video: true,
+              //video: { facingMode: { exact: "environment" } } //activate this line for rear camera
+            };
+
+            video.style="display:visible;";
+            btn_screenshot.style="display:visible;";
+
+            navigator.mediaDevices.getUserMedia(constraints).
+              then((stream) => {video.srcObject = stream});
+        });
+      });
+
+
+      $( function() {
+        $("#btn_screenshot").click(
+          function(event){
+            event.preventDefault();
+
+            document.exitFullscreen();
+
+            const video = document.getElementById('video');
+            const btn_screenshot = document.getElementById('btn_screenshot');  
+            const canvas = document.getElementById('canvas_img');
+            const img = document.getElementById("image");
+
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+
+            canvas.getContext('2d').drawImage(video, 0, 0, 480, 640, 0, 0, 480, 640);
+            img.src = canvas.toDataURL('image/png');
+
+            video.srcObject = null;
+            video.style="display:none;";
+            btn_screenshot.style="display:none;";
+        });
+      });
+
+    </script>
+
+    <canvas id="canvas_img" style="display:none;"></canvas>
+    <img id="image" border="0" src="image/no_image.png">
+
+    <button id="btn_launch_cam">Launch Camera</button>
+
+    <div id="div_video">
+      <video id="video" style="display: none;" autoplay></video>
+      <button id="btn_screenshot" style="display: none;">Take Picture</button>
+    </div>
+
+  </body>
+</html>
