@@ -9,11 +9,13 @@ This example　only use one HTML page also containing JavaSript/JQuery.
   If for test reasons, you cannot use to HTTPS, you can use Google Chrome and go to chrome://flags
   Then you can add the website address to #unsafely-treat-insecure-origin-as-secure 
   Never use that for any other website than your own.
-  
+
+## Camera / Picture dimensions
 I left default camera dimensions so it could be tested on any device.
 You may have to add width height values to video and img elements.
 The taken picture has the dimensions 480 * 640. You'll have to change it too.
 
+## Some customization
 By default, the front camera is used. To use the rear camera, please uncomment the line:
 //video: { facingMode: { exact: "environment" } }
 
