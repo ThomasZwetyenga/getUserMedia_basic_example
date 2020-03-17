@@ -7,7 +7,9 @@ This example　only use one HTML page also containing JavaSript/JQuery.
 ⚠️ This will only work using HTTPS and after the user allowed the use of the camera.
   
   If for test reasons, you cannot get HTTPS, you can use Google Chrome and go to chrome://flags
+  
   Then you can add the website address to #unsafely-treat-insecure-origin-as-secure 
+  
   Never use that for any other website than your own.
 
 ## Camera / Picture dimensions
