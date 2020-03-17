@@ -3,6 +3,7 @@ Take pictures from smartphone/computer web browser (Google Chrome, Firefox, Safa
 
 This example　only use one HTML page also containing JavaSript/JQuery.
 
+## HTTPS
 ⚠️ This will only work using HTTPS and after the user allowed the use of the camera.
   
   If for test reasons, you cannot use to HTTPS, you can use Google Chrome and go to chrome://flags
